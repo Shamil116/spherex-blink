@@ -1,0 +1,9 @@
+# virtual environment
+hackathon/
+# downloaded SPHEREx images and other bulk data (re-fetched by the pipeline)
+data/cache/
+__pycache__/
+*.pyc
+.env
+# photos of the organisers' slides (people visible; not part of the project)
+About_the_competition/
