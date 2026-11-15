@@ -27,7 +27,7 @@ On top of the viewer, a "Planet X stack" removes the fixed stars and adds the ex
 
 ## Link to Project Demo
 
-`<public link to the 7-slide PDF>`
+https://github.com/Shamil116/spherex-blink/blob/main/presentation/SPHEREx_Blink_slides.pdf (7 slides; replace TEAM NAME and MEMBER NAMES on slide 1 first)
 
 ## Link to Final Project
 

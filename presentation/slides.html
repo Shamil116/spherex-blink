@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SPHEREx Blink - slides</title>
+<!-- 7 slides, 1280 x 720 px each. Print to PDF with headless Chrome: --print-to-pdf. Prepared with AI assistance (Claude). -->
+<style>
+  @page { size: 1280px 720px; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #121211; }
+  body { font-family: "Segoe UI", system-ui, Roboto, sans-serif; color: #f0efec; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; padding: 56px 72px 64px; background: #121211; page-break-after: always; break-after: page; }
+  .slide:last-child { page-break-after: auto; break-after: auto; }
+  .kicker { color: #3987e5; font-size: 17px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 10px; }
+  h1 { font-size: 46px; line-height: 1.12; font-weight: 700; margin-bottom: 22px; }
+  h2 { font-size: 21px; font-weight: 700; margin-bottom: 6px; }
+  p, li { font-size: 21px; line-height: 1.42; color: #dcdbd5; }
+  ul { list-style: none; }
+  li { padding-left: 26px; position: relative; margin-bottom: 13px; }
+  li::before { content: ""; position: absolute; left: 2px; top: 12px; width: 10px; height: 10px; border-radius: 2px; background: #3987e5; }
+  b, strong { color: #ffffff; }
+  .muted { color: #a3a29a; }
+  .accent { color: #f0a020; }
+  .foot { position: absolute; left: 72px; right: 72px; bottom: 22px; display: flex; justify-content: space-between; font-size: 13px; color: #7d7c75; border-top: 1px solid #2c2c29; padding-top: 9px; }
+  .grid { display: grid; gap: 34px; }
+  .two { grid-template-columns: 1fr 1fr; }
+  .card { background: #1c1c1a; border: 1px solid #33332f; border-radius: 12px; padding: 18px 20px; }
+  .card p { font-size: 18px; line-height: 1.38; }
+  .shot { border: 1px solid #33332f; border-radius: 10px; overflow: hidden; background: #000; }
+  .shot img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .big { font-size: 64px; font-weight: 800; color: #fff; line-height: 1; }
+  .placeholder { background: #f0a020; color: #121211; padding: 1px 8px; border-radius: 4px; font-weight: 700; }
+  .flow { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  .step { display: grid; grid-template-columns: 46px 1fr; gap: 14px; align-items: start; }
+  .num { width: 42px; height: 42px; border-radius: 50%; background: #3987e5; color: #fff; font-size: 21px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+  .step p { font-size: 19px; }
+  table { border-collapse: collapse; width: 100%; }
+  td { font-size: 18px; line-height: 1.35; padding: 9px 10px; border-bottom: 1px solid #2c2c29; vertical-align: top; color: #dcdbd5; }
+  td:first-child { color: #fff; font-weight: 700; white-space: nowrap; width: 1%; padding-left: 0; }
+</style>
+</head>
+<body>
+
+<!-- 1. Title -->
+<section class="slide" style="padding:0; display:grid; grid-template-columns: 1fr 520px;">
+  <div style="padding: 70px 56px 60px 72px; display:flex; flex-direction:column; justify-content:center;">
+    <div class="kicker">NASA Space Apps Challenge 2026 · Baku</div>
+    <h1 style="font-size:64px; margin-bottom:14px;">SPHEREx Blink</h1>
+    <p style="font-size:27px; color:#fff; margin-bottom:34px;">Type sky coordinates. Watch the infrared sky move.<br>Hunt for Planet X.</p>
+    <p style="font-size:20px; margin-bottom:8px;"><span class="muted">Challenge:</span> <b>Planet X and SPHEREx</b></p>
+    <p style="font-size:20px; margin-bottom:8px;"><span class="muted">Team:</span> <span class="placeholder">TEAM NAME</span></p>
+    <p style="font-size:20px;"><span class="muted">Members:</span> <span class="placeholder">MEMBER NAMES</span></p>
+  </div>
+  <div class="shot" style="border-radius:0; border:none; border-left:1px solid #33332f;">
+    <img src="../figures/1_barnard_star_difference.png" style="object-view-box: inset(13% 36% 23% 23%);" alt="Barnard's Star moving between two SPHEREx epochs">
+  </div>
+  <div style="position:absolute; right:16px; bottom:12px; font-size:13px; color:#c3c2b7; background:rgba(0,0,0,.6); padding:4px 8px; border-radius:4px;">Barnard's Star, 2026 minus 2025: white = now, black = a year ago</div>
+</section>
+
+<!-- 2. Challenge -->
+<section class="slide">
+  <div class="kicker">The challenge</div>
+  <h1>Too much sky for any one person to watch</h1>
+  <div class="grid" style="grid-template-columns: 1fr 360px; align-items:start;">
+    <ul>
+      <li>NASA's <b>SPHEREx</b> maps the whole sky every six months in <b>102 infrared colours</b>.</li>
+      <li>Asteroids, brown dwarfs and perhaps an undiscovered <b>“Planet X”</b> show themselves only by <b>moving</b> between images.</li>
+      <li>Today the images sit in an archive built for specialists: there is no quick way to <b>see how a patch of sky changes</b>.</li>
+      <li>Planet X (Planet Nine) is predicted from the orbits of distant icy bodies, but it has never been seen.</li>
+    </ul>
+    <div class="card" style="padding:26px;">
+      <div class="big">1.63 M</div>
+      <p style="margin-top:10px;">SPHEREx images public so far<br><span class="muted">April 2025 – October 2026, each 65 MB</span></p>
+      <div class="big" style="margin-top:26px;">102</div>
+      <p style="margin-top:10px;">wavelength channels, 0.75–5.0 µm</p>
+    </div>
+  </div>
+  <div class="foot"><span>SPHEREx Blink · Planet X and SPHEREx</span><span>2</span></div>
+</section>
+
+<!-- 3. Solution -->
+<section class="slide">
+  <div class="kicker">Our solution</div>
+  <h1>A free web page that plays any patch of sky as a movie</h1>
+  <p style="font-size:23px; margin-bottom:28px;">Enter coordinates or a name. SPHEREx Blink finds every SPHEREx image of that spot and shows how it changes. For <b>students, citizen scientists and astronomers</b> — no login, no install.</p>
+  <div class="grid" style="grid-template-columns: repeat(4, 1fr); gap:18px;">
+    <div class="card"><h2>Blink</h2><p>One deep image per visit, or every exposure in time order.</p></div>
+    <div class="card"><h2>Subtract</h2><p>One epoch minus another: fixed stars vanish, movers become white-black pairs.</p></div>
+    <div class="card"><h2>Spectrum</h2><p>Click any point: its 102-channel spectrum, built on the fly, per epoch.</p></div>
+    <div class="card"><h2>Planet X stack</h2><p>Add all images along the path a distant planet would follow.</p></div>
+  </div>
+  <p class="muted" style="font-size:19px; margin-top:24px;">Also: Gaia and WISE star overlays · choose field of view and detectors · shareable link with coordinates in the URL · download spectra as CSV.</p>
+  <div class="foot"><span>SPHEREx Blink · Planet X and SPHEREx</span><span>3</span></div>
+</section>
+
+<!-- 4. How it works -->
+<section class="slide" style="display:grid; grid-template-columns: 640px 1fr; gap:40px; padding-top:48px;">
+  <div>
+    <div class="kicker">How it works</div>
+    <div class="shot" style="height:500px;"><img src="../figures/2_epsilon_indi_b_spectrum.png" style="object-fit:contain; background:#121211;" alt="SPHEREx Blink showing Epsilon Indi B"></div>
+    <p class="muted" style="font-size:15px; margin-top:8px;">Epsilon Indi B: the brown dwarfs move between epochs (left); their spectrum shows methane and water bands (right).</p>
+  </div>
+  <div style="padding-top:44px;">
+    <div class="flow">
+      <div class="step"><div class="num">1</div><p><b>Sky index.</b> We read 1 kB of every SPHEREx image to record where it points: 1.6 M images in small files.</p></div>
+      <div class="step"><div class="num">2</div><p><b>Only the pixels you need.</b> The browser downloads just the rows that cover your patch, straight from NASA's public archive: 0.5 MB instead of 65 MB per image.</p></div>
+      <div class="step"><div class="num">3</div><p><b>Science in the browser.</b> Sky coordinates, wavelength, sky subtraction, stacking, differences and photometry, all in JavaScript.</p></div>
+      <div class="step"><div class="num">4</div><p><b>No server.</b> Free to host on GitHub Pages; a new data release needs one script run.</p></div>
+    </div>
+    <p class="muted" style="font-size:17px; margin-top:18px;">Positions checked against astropy to a billionth of a pixel.</p>
+  </div>
+  <div class="foot"><span>SPHEREx Blink · Planet X and SPHEREx</span><span>4</span></div>
+</section>
+
+<!-- 5. Space data -->
+<section class="slide">
+  <div class="kicker">Space data and tools</div>
+  <h1>NASA data is the core of every pixel</h1>
+  <table>
+    <tr><td>NASA SPHEREx</td><td>Level-2 spectral images, releases DR1 and QR3, from the NASA/IPAC Infrared Science Archive (public cloud bucket). Every image and spectrum in the tool.</td></tr>
+    <tr><td>ESA Gaia DR3</td><td>Positions and motions of stars, drawn on every frame at that frame's date (partner agency data).</td></tr>
+    <tr><td>NASA WISE</td><td>CatWISE2020 infrared sources as a second overlay.</td></tr>
+    <tr><td>JPL Horizons, IRSA</td><td>Known positions of Pluto and Eris, used to test the Planet X search.</td></tr>
+    <tr><td>WiseView</td><td>The WISE blink tool named in the challenge (byw.tools): our model for SPHEREx.</td></tr>
+    <tr><td>Tools</td><td>JavaScript, Python with astropy, Node.js, GitHub Pages. Code written with the help of an AI assistant (Claude).</td></tr>
+  </table>
+  <div class="foot"><span>SPHEREx Blink · Planet X and SPHEREx</span><span>5</span></div>
+</section>
+
+<!-- 6. Impact / results -->
+<section class="slide" style="display:grid; grid-template-columns: 1fr 430px; gap:36px; padding-top:48px;">
+  <div>
+    <div class="kicker">Results on real data</div>
+    <h1 style="font-size:38px; margin-bottom:18px;">It finds what moves — tested on known objects</h1>
+    <ul>
+      <li><b>Barnard's Star</b> and <b>Epsilon Indi B</b>: their motion is clear between epochs.</li>
+      <li><b>WISE 0855</b>, the coldest brown dwarf: glows at 4.4–5 µm where predicted.</li>
+      <li><b>Pluto</b> found by the Planet X stack at <b>36 AU</b> (true distance 35.5 AU).</li>
+      <li><b>Eris</b>, 96 AU, too faint to see well in one image: found at <b>13 σ</b>.</li>
+      <li>Test planet at 500 AU: recovered down to <b>100 µJy</b> in one visit.</li>
+    </ul>
+    <p style="font-size:18px; margin-top:6px;"><span class="accent"><b>Honest limit:</b></span> the predicted Planet Nine is 2–3 magnitudes fainter than one SPHEREx visit reaches. <b>We claim no discovery</b>; the reach grows with every sky pass.</p>
+  </div>
+  <div>
+    <div class="shot" style="height:430px; margin-top:28px;"><img src="../figures/7_eris_planet_x_stack.png" style="object-view-box: inset(13% 36% 23% 23%);" alt="Planet X stack finding Eris"></div>
+    <p class="muted" style="font-size:15px; margin-top:8px;">Planet X stack: Eris appears in the yellow box after adding 112 exposures along its path.</p>
+  </div>
+  <div class="foot"><span>SPHEREx Blink · Planet X and SPHEREx</span><span>6</span></div>
+</section>
+
+<!-- 7. Next steps -->
+<section class="slide">
+  <div class="kicker">Impact and next steps</div>
+  <h1>Let everyone join the search</h1>
+  <div class="grid two" style="gap:40px;">
+    <div>
+      <h2 style="margin-bottom:12px;">Who benefits</h2>
+      <ul>
+        <li>Citizen scientists, like the Backyard Worlds volunteers who search WISE images the same way.</li>
+        <li>Students: real NASA data in one click.</li>
+        <li>Astronomers: a quick look before downloading files.</li>
+      </ul>
+    </div>
+    <div>
+      <h2 style="margin-bottom:12px;">Next</h2>
+      <ul>
+        <li>Stack across visits as SPHEREx repeats the sky: deeper Planet X limits.</li>
+        <li>Scan the whole Planet Nine zone automatically; queue candidates for volunteers.</li>
+        <li>Link detections between epochs to measure orbits.</li>
+        <li>Update the index with every new data release.</li>
+      </ul>
+    </div>
+  </div>
+  <p style="font-size:21px; margin-top:22px;"><b>Code and tool:</b> github.com/Shamil116/spherex-blink</p>
+  <p class="muted" style="font-size:14px; margin-top:14px;">Slides prepared with AI assistance (Claude). Images are screenshots of the tool showing real NASA SPHEREx data. Not affiliated with or endorsed by NASA.</p>
+  <div class="foot"><span>SPHEREx Blink · Planet X and SPHEREx</span><span>7</span></div>
+</section>
+
+</body>
+</html>
