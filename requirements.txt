@@ -1,0 +1,11 @@
+numpy
+scipy
+astropy
+matplotlib
+pandas
+requests
+astroquery
+pyvo
+photutils
+reproject
+astropy-healpix
